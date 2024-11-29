@@ -45,4 +45,18 @@ public class QuestionService {
             System.out.println(S);
         }
     }
+
+    public void printScore(){
+        int score = 0;
+        for(int i=0; i<questions.length; i++){
+            Question ques = questions[i];
+            String ans = ques.getAnswer();
+            String userAns = selection[i];
+
+            if(ans.equals(userAns)){
+                score++;
+            }
+        }
+        System.err.println("score"+score);
+    }
 }
